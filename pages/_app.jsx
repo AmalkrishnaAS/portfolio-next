@@ -7,7 +7,7 @@ import {useEffect} from 'react'
 import {useRef} from 'react'
 import Head from 'next/head'
 
-function MyApp() {
+function MyApp({ Component, pageProps }) {
   const containerRef = useRef(null)
   const [navbg, setNavbg] = useState(false)
   useEffect(() => {
