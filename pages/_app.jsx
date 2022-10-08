@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+
 import Navbar from '../components/Navbar'
 import Menu from '../components/Menu'
 import { useState } from 'react'
@@ -7,7 +7,7 @@ import {useEffect} from 'react'
 import {useRef} from 'react'
 import Head from 'next/head'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp() {
   const containerRef = useRef(null)
   const [navbg, setNavbg] = useState(false)
   useEffect(() => {

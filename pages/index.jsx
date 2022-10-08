@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
@@ -8,7 +8,7 @@ import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Contact from "../components/Contact";
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div className='bg-base-500 '>
       <Hero></Hero>
