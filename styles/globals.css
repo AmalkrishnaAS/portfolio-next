@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&display=swap');
+
+.hero{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("/hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+*{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar
+{
+  width: 0px;
+  background: transparent;
+}
+
+    @keyframes rotate-z {
+      0% {
+        transform: rotateZ(0deg);
+      transform-origin: 'bottom right';
+       }
+      100% {
+        transform: rotateZ(360deg);
+       
+       } 
+
+      
+    }
+    .box-rotate {
+      animation: rotate-z 7s infinite linear;
+      transform-origin: 'top left';
+    }
+
+    @media screen and (max-width: 368px) {
+      .box-rotate {
+        animation: none;
+      }
+    }
+  
+
+      
+    
+
+    
+    
