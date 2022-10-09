@@ -4,21 +4,23 @@ import { LocationMarkerIcon, MailIcon, PaperAirplaneIcon, PhoneIcon } from '@her
 import { FaLocationArrow } from 'react-icons/fa'
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser';
-
-
+import { useState } from 'react'
+import Loader from './Loader'
 const Contact = () => {
     const form = useRef()
   const service_id=process.env.NEXT_PUBLIC_SERVICE_ID
   const template_id=process.env.NEXT_PUBLIC_TEMPLATE_ID
   const public_key=process.env.NEXT_PUBLIC_PUBLIC_KEY
+  const [loading,setLoading]=useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
     console.log('Form submitted')
     //send email using emailjs
    const res= await emailjs.sendForm(service_id,template_id,form.current,public_key)
     console.log(res)
-
+    setLoading(false)
     e.target.reset()
 
     
@@ -50,7 +52,7 @@ const Contact = () => {
 
         </div>
         
-        <div className='flex justify-center items-center gap-3 flex-wrap md:flex-row'>
+        <div className='flex justify-center items-center gap-3 flex-wrap flex-col md:flex-row'>
           <div className='border-2 bg-[rgba(226,137,82,0.3)] text-orange-300 border-orange-500 w-10 h-10 flex justify-center items-center rounded-full '>
             <MailIcon className='h-6 w-6   ' aria-hidden='true' />
             
@@ -78,10 +80,13 @@ const Contact = () => {
     <label for="message" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-orange-600 peer-focus:dark:text-orange-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 text-lg">Message</label>
 </div>
 <button  className='border-2 bg-[rgba(226,137,82,0.3)] text-orange-300 border-orange-500 px-8 py-2 rounded-xl font-mono flex space-x-2'>
-    <PaperAirplaneIcon className='h-6 w-6' />
+   { !loading? <><PaperAirplaneIcon className='h-6 w-6' />
 <p>
-    SEND
+ SEND   
 </p>
+</>:<Loader />
+
+}
 </button>
        </form>
     </div>

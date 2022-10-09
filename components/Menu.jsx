@@ -21,28 +21,28 @@ const Menu = ({
                 className='text-white hover:text-base-500 transition-all duration-150'
                 size={30}
                  />,
-                link: 'https://www.facebook.com/amalkrishna',
+                link: 'https://www.facebook.com/amalkrishna.as.39',
             },
             {
                 name: 'Twitter',
                 icon: <FaTwitter
                 className='text-white hover:text-base-500 transition-all duration-150'
                 size={30} />,
-                link: 'https://twitter.com/amalkrishna',
+                link: 'https://twitter.com/AmalkrishnaAS7',
             },
             {
                 name: 'Linkedin',
                 icon: <FaLinkedin 
                 className='text-white hover:text-base-500 transition-all duration-150'
                 size={30} />,
-                link: 'https://www.linkedin.com/in/amalkrishna/',
+                link: 'https://www.linkedin.com/in/amalkrishna-as/',
             },
             {
                 name: 'Github',
                 icon: <FaGithub
                 className='text-white hover:text-base-500 transition-all duration-150'
                 size={30} />,
-                link: ''
+                link: 'https://www.github.com/AmalkrishnaAS',
             }
         ]
         const routes=[
@@ -120,7 +120,7 @@ const Menu = ({
             {
                 routes.map((route,index)=>{
                     return (
-                        <motion.li className='p-3 mb-3  'onClick={
+                        <motion.li className='p-3 mb-3 cursor-pointer  'onClick={
                             ()=>{
                                 route.function()
                                 setMenuOpen(false)

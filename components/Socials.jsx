@@ -11,7 +11,7 @@ const Socials = () => {
           size={30}
         />
       ),
-      link: "https://www.facebook.com/amalkrishna",
+      link: "https://www.facebook.com/amalkrishna.as.39",
     },
     {
       name: "Twitter",
@@ -21,7 +21,7 @@ const Socials = () => {
           size={30}
         />
       ),
-      link: "https://twitter.com/amalkrishna",
+      link: "https://twitter.com/AmalkrishnaAS7",
     },
     {
       name: "Linkedin",
@@ -31,7 +31,7 @@ const Socials = () => {
           size={30}
         />
       ),
-      link: "https://www.linkedin.com/in/amalkrishna/",
+      link: "https://www.linkedin.com/in/amalkrishna-as/",
     },
     {
       name: "Github",
@@ -41,7 +41,7 @@ const Socials = () => {
           size={30}
         />
       ),
-      link: "",
+      link: "https://www.github.com/AmalkrishnaAS",
     },
   ];
   return (
