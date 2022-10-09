@@ -3,22 +3,36 @@ import React from 'react'
 import {DownloadIcon,MenuIcon} from '@heroicons/react/outline'
 import {motion} from 'framer-motion'
 const Navbar = ({menuOpen,setMenuOpen,navbg}) => {
-    const routes = [
+    const routes=[
         {
-            name: 'Home',
-            path: '/'
+            name:'Home',
+            function:()=>{
+                //scroll to top
+                window.scrollTo(0,0)
+            },
+         
         },
         {
-            name: 'About',
-            path: '/about'
+            name:'About',
+            function:()=>{
+                //scroll to about
+                window.scrollTo(0,document.getElementById('about').offsetTop)
+            }
         },
         {
-            name: 'Contact',
-            path: '/contact'
+            name:'Contact',
+            function:()=>{
+                //scroll to contact
+                window.scrollTo(0,document.getElementById('contact')?.offsetTop)
+            }
         },
         {
-            name: 'Resume',
-            path: '/resume.pdf'
+            name:'Resume',
+            function:()=>{
+                //download file
+                window.open('/resume.pdf')
+
+        }
         }
     ]
   return (
@@ -33,6 +47,7 @@ const Navbar = ({menuOpen,setMenuOpen,navbg}) => {
                     <motion.li key={route.name} className='p-3 cursor-pointer'
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
+                        onClick={route.function}
 
                     >
                         <p href={route.path} className='tracking-wide font-semibold text-white uppercase hover:text-primary-500 transition-all duration-150  '>{route.name}</p>

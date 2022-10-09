@@ -23,7 +23,8 @@ const ProjectCard = ({item}) => {
     </p>
     <div>
       <div className='m-3 flex p-2 space-x-4'>
-      <a href={item.links.contribute} className='border-2 hover:scale-105 transition-all duration-100 bg-[rgba(226,137,82,0.3)] text-orange-300 border-orange-500 w-10 h-10 flex justify-center items-center rounded-full '>
+      <a href={item.links.contribute} title={item.links.contribute
+      ?'Contribute':'Codebase is not available'} className='border-2 hover:scale-105 transition-all duration-100 bg-[rgba(226,137,82,0.3)] text-orange-300 border-orange-500 w-10 h-10 flex justify-center items-center rounded-full '>
             <LinkIcon className='h-6 w-6   ' aria-hidden='true' />
             
 

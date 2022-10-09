@@ -6,8 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@heroicons/react": "^1.0.6",
     "daisyui": "^2.19.1",
+    "emailjs": "^4.0.1",
     "framer-motion": "^6.5.1",
     "locomotive-scroll": "^4.1.4",
     "next": "latest",
